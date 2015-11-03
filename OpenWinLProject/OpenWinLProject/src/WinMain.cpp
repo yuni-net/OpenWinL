@@ -1,6 +1,7 @@
 #include <OpenWinL.h>
 #include "God.h"
 
+//int __stdcall WinMain(void * hI, void * hPI, TCHAR lCL, int nCS)
 int ow_main
 {
 	ow::Manager::init();

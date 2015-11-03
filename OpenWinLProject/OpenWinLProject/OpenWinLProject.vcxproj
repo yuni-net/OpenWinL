@@ -12,6 +12,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\OpenWinL_cpp\Manager.cpp" />
+    <ClCompile Include="..\..\OpenWinL_cpp\shortcut.cpp" />
+    <ClCompile Include="..\..\OpenWinL_cpp\Time.cpp" />
     <ClCompile Include="..\..\OpenWinL_cpp\Window.cpp" />
     <ClCompile Include="src\God.cpp" />
     <ClCompile Include="src\WinMain.cpp" />
@@ -21,6 +23,8 @@
     <ClInclude Include="..\..\OpenWinL\OpenWinL.h" />
     <ClInclude Include="..\..\OpenWinL\ow_main.h" />
     <ClInclude Include="..\..\OpenWinL\popular.h" />
+    <ClInclude Include="..\..\OpenWinL\shortcut.h" />
+    <ClInclude Include="..\..\OpenWinL\Time.h" />
     <ClInclude Include="..\..\OpenWinL\Window.h" />
     <ClInclude Include="src\God.h" />
   </ItemGroup>
@@ -69,7 +73,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;ow_implement_is_DirectX9_;ow_implement_is_OpenGL;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -87,7 +91,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;ow_implement_is_DirectX9_;ow_implement_is_OpenGL;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>

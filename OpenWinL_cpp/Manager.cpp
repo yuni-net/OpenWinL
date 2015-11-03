@@ -1,5 +1,6 @@
 #include <Manager.h>
 #include <popular.h>
+#include <Window.h>
 
 namespace ow
 {
@@ -26,6 +27,12 @@ namespace ow
 	}
 
 
+	const Time & Manager::get_time()
+	{
+		return *(get_instance().time);
+	}
+
+
 
 
 	Manager & Manager::get_instance()
@@ -36,6 +43,28 @@ namespace ow
 
 
 
+#ifdef ow_implement_is_DirectX9_
+	bool Manager::init_dynamic(const int screen_width, const int screen_height)
+	{
+		window.reset(new Window(screen_width, screen_height));
+		time.reset(new Time());
+
+		return true;
+	}
+
+	bool Manager::begin_frame_dynamic()
+	{
+		time->update();
+		return window->can_I_continue();
+	}
+
+	void Manager::show_dynamic()
+	{
+		window->show();
+	}
+#endif
+
+#ifdef ow_implement_is_OpenGL_
 	bool Manager::init_dynamic(const int screen_width, const int screen_height)
 	{
 		if (glfwInit() == GL_FALSE)
@@ -50,13 +79,17 @@ namespace ow
 
 	bool Manager::begin_frame_dynamic()
 	{
-		// todo
-		return true;
+		glfwPollEvents();
+		time->update();
+		return window->can_I_continue();
 	}
 
 	void Manager::show_dynamic()
 	{
-		// todo
+		window->show();
 	}
+#endif
+
+
 
 }

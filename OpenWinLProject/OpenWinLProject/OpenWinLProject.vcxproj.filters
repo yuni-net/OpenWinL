@@ -13,6 +13,12 @@
     <Filter Include="OpenWinL\Manager">
       <UniqueIdentifier>{362e1225-d53c-4368-9ea2-dfb74712158d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="OpenWinL\Time">
+      <UniqueIdentifier>{85b34a3b-850e-40aa-90fb-77b2f8bb2cc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenWinL\shortcut">
+      <UniqueIdentifier>{9ca472eb-7c2b-436b-b488-61cbda7ed103}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\WinMain.cpp" />
@@ -24,6 +30,12 @@
     </ClCompile>
     <ClCompile Include="..\..\OpenWinL_cpp\Manager.cpp">
       <Filter>OpenWinL\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OpenWinL_cpp\Time.cpp">
+      <Filter>OpenWinL\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OpenWinL_cpp\shortcut.cpp">
+      <Filter>OpenWinL\shortcut</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,6 +56,12 @@
     </ClInclude>
     <ClInclude Include="..\..\OpenWinL\ow_main.h">
       <Filter>OpenWinL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OpenWinL\Time.h">
+      <Filter>OpenWinL\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OpenWinL\shortcut.h">
+      <Filter>OpenWinL\shortcut</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

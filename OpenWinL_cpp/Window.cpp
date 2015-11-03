@@ -15,6 +15,51 @@ namespace ow
 	}
 
 
+#ifdef ow_implement_is_DirectX9_
+	HWND Window::get_handle() const
+	{
+		return window.myhandle();
+	}
+
+	bool Window::can_I_continue() const
+	{
+		return fw::Window::processage();
+	}
+
+	void Window::show() const
+	{
+		// todo
+	}
+
+
+
+
+	void Window::construct(const int width, const int height)
+	{
+		window.width(width).height(height).title("An Window");
+		window.create();
+	}
+#endif
+
+#ifdef ow_implement_is_OpenGL_
+	GLFWwindow * Window::get_handle() const
+	{
+		return window;
+	}
+
+	bool Window::can_I_continue() const
+	{
+		glClear(GL_COLOR_BUFFER_BIT);
+		return glfwWindowShouldClose(window) == 0;
+	}
+
+	void Window::show() const
+	{
+		glfwSwapBuffers(window);
+	}
+
+
+
 
 	void Window::construct(const int width, const int height)
 	{
@@ -29,5 +74,7 @@ namespace ow
 		// ‚’¼“¯ŠúM†‚ğ1‰ñ‘Ò‚Âİ’è‚É‚·‚é
 		glfwSwapInterval(1);
 	}
+#endif
+
 
 }
