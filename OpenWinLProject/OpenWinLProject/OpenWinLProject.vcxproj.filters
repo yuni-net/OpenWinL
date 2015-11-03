@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="God">
+      <UniqueIdentifier>{8b830153-74d6-4574-8486-2df5742f8b4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenWinL">
+      <UniqueIdentifier>{0fff5205-69e2-4ec0-aa39-2eb439f7ae8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenWinL\Window">
+      <UniqueIdentifier>{e48dce43-4a5d-4764-8a78-ac3b564a52b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenWinL\Manager">
+      <UniqueIdentifier>{362e1225-d53c-4368-9ea2-dfb74712158d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\WinMain.cpp" />
+    <ClCompile Include="src\God.cpp">
+      <Filter>God</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OpenWinL_cpp\Window.cpp">
+      <Filter>OpenWinL\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OpenWinL_cpp\Manager.cpp">
+      <Filter>OpenWinL\Manager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\God.h">
+      <Filter>God</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OpenWinL\OpenWinL.h">
+      <Filter>OpenWinL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OpenWinL\Window.h">
+      <Filter>OpenWinL\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OpenWinL\popular.h">
+      <Filter>OpenWinL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OpenWinL\Manager.h">
+      <Filter>OpenWinL\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OpenWinL\ow_main.h">
+      <Filter>OpenWinL</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
